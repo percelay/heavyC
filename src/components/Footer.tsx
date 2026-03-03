@@ -27,20 +27,38 @@ export default function Footer({ businessName, contact, requestQuoteLabel }: Foo
           </h2>
           <div className="mt-3 h-1 w-16 rounded-full bg-primary" />
 
-          <form className="mt-8 space-y-4" action="#" method="post">
+          <form className="mt-8 space-y-4" action="#" method="post" autoComplete="on">
+            <input type="hidden" name="form-name" value="quote-request" />
             <input
-              aria-label={contact.details[2]}
+              name="name"
+              aria-label="Full name"
               type="text"
+              autoComplete="name"
+              placeholder="Full Name"
               className="w-full rounded-xl border border-black/15 bg-white px-4 py-3 text-text-main outline-none transition-colors duration-200 focus:border-primary"
             />
             <input
-              aria-label={contact.details[2]}
+              name="phone"
+              aria-label="Phone number"
+              type="tel"
+              autoComplete="tel"
+              placeholder="Phone Number"
+              className="w-full rounded-xl border border-black/15 bg-white px-4 py-3 text-text-main outline-none transition-colors duration-200 focus:border-primary"
+            />
+            <input
+              name="email"
+              aria-label="Email address"
               type="email"
+              autoComplete="email"
+              placeholder="Email Address"
               className="w-full rounded-xl border border-black/15 bg-white px-4 py-3 text-text-main outline-none transition-colors duration-200 focus:border-primary"
             />
             <textarea
-              aria-label={contact.details[0]}
+              name="message"
+              aria-label="Project details"
               rows={5}
+              placeholder="Tell us about your project, timeline, and service needed."
+              defaultValue="Hi Heavy C's, I would like a quote for:"
               className="w-full resize-none rounded-xl border border-black/15 bg-white px-4 py-3 text-text-main outline-none transition-colors duration-200 focus:border-primary"
             />
             <button
@@ -85,7 +103,17 @@ export default function Footer({ businessName, contact, requestQuoteLabel }: Foo
 
           <section>
             <h3 className="text-xl font-semibold text-text-main">{contact.details[3]}</h3>
-            <div className="mt-4 flex gap-3">
+            <a
+              href={BBB_URL}
+              aria-label="Better Business Bureau"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-4 flex items-center justify-center gap-2 rounded-xl border-2 border-primary bg-primary px-4 py-3 text-sm font-semibold text-white transition-transform duration-200 hover:-translate-y-1"
+            >
+              <BadgeCheck className="h-5 w-5" />
+              <span>View Our BBB Profile</span>
+            </a>
+            <div className="mt-3 flex gap-3">
               <a
                 href={INSTAGRAM_URL}
                 aria-label="Instagram"
@@ -103,15 +131,6 @@ export default function Footer({ businessName, contact, requestQuoteLabel }: Foo
                 className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-primary text-primary transition-colors duration-200 hover:bg-primary hover:text-white"
               >
                 <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href={BBB_URL}
-                aria-label="Better Business Bureau"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-primary text-primary transition-colors duration-200 hover:bg-primary hover:text-white"
-              >
-                <BadgeCheck className="h-5 w-5" />
               </a>
             </div>
           </section>

@@ -9,7 +9,7 @@ export default function Hero({ hero }: HeroProps) {
   return (
     <section className="relative isolate flex h-screen items-center justify-center overflow-hidden" aria-labelledby="hero-headline">
       <Image
-        src="/images/landscaping.jpg"
+        src="/images/hero.jpeg"
         alt={hero.headline}
         fill
         priority
