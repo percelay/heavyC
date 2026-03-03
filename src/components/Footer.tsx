@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ChevronDown, Facebook, Instagram, MapPin } from 'lucide-react'
+import { BadgeCheck, ChevronDown, Facebook, Instagram, MapPin } from 'lucide-react'
 import type { ContactContent } from '@/lib/sourcematerial'
 
 type FooterProps = {
@@ -9,6 +9,11 @@ type FooterProps = {
   contact: ContactContent
   requestQuoteLabel: string
 }
+
+const INSTAGRAM_URL = 'https://www.instagram.com/corbin.jackson.750/'
+const FACEBOOK_URL = 'https://www.facebook.com/corbin.jackson.550020/'
+const BBB_URL =
+  'https://www.bbb.org/us/pa/yardley/profile/general-contractor/heavy-cs-properties-llc-0241-236093011'
 
 export default function Footer({ businessName, contact, requestQuoteLabel }: FooterProps) {
   const [hoursOpen, setHoursOpen] = useState(false)
@@ -82,18 +87,31 @@ export default function Footer({ businessName, contact, requestQuoteLabel }: Foo
             <h3 className="text-xl font-semibold text-text-main">{contact.details[3]}</h3>
             <div className="mt-4 flex gap-3">
               <a
-                href="#"
+                href={INSTAGRAM_URL}
                 aria-label="Instagram"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-primary text-primary transition-colors duration-200 hover:bg-primary hover:text-white"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href={FACEBOOK_URL}
                 aria-label="Facebook"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-primary text-primary transition-colors duration-200 hover:bg-primary hover:text-white"
               >
                 <Facebook className="h-5 w-5" />
+              </a>
+              <a
+                href={BBB_URL}
+                aria-label="Better Business Bureau"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-primary text-primary transition-colors duration-200 hover:bg-primary hover:text-white"
+              >
+                <BadgeCheck className="h-5 w-5" />
               </a>
             </div>
           </section>

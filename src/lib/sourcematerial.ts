@@ -135,10 +135,10 @@ export function getSourceMaterial(): SiteContent {
 
   const services: ServiceContent[] = []
   const serviceImages = [
-    '/images/service-1.jpeg',
-    '/images/service-2.jpeg',
-    '/images/service-3.jpeg',
-    '/images/service-4.jpeg',
+    '/images/plumbertek.jpg',
+    '/images/landscapetek.jpg',
+    '/images/electrician.jpeg',
+    '/images/bathroom.jpeg',
   ]
 
   let cursor = servicesIndex + 1
@@ -185,11 +185,16 @@ export function getSourceMaterial(): SiteContent {
       title: galleryTitle,
       description: galleryDescription,
       images: [
-        '/images/gallery-1.jpeg',
-        '/images/gallery-2.jpeg',
-        '/images/gallery-3.jpeg',
-        '/images/gallery-4.jpeg',
-        '/images/gallery-5.jpeg',
+        '/images/gal1.webp',
+        '/images/gal2.webp',
+        '/images/gal3.webp',
+        '/images/gal4.webp',
+        '/images/gal5.webp',
+        '/images/gal6.webp',
+        '/images/gal7.webp',
+        '/images/gal8.webp',
+        '/images/gal9.webp',
+        '/images/gal10.webp',
       ],
     },
     testimonials: {
